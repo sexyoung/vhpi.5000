@@ -50,7 +50,7 @@ const App: React.FC = () => {
   const [resultList, setResultList] = useState<string[]>();
   useEffect(() => {
     // get code json
-    fetch('/code.json').then(res => res.json()).then(setCodeList);
+    fetch('/vhpi.5000/code.json').then(res => res.json()).then(setCodeList);
   }, []);
 
   const findPrize = (code: string) => {
