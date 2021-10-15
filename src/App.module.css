@@ -1,0 +1,48 @@
+.App {
+  text-align: center;
+}
+
+.logo {
+  background-image: url(./images/LOGO.png);
+  @apply h-12 mx-auto mt-5 max-w-xs bg-cover bg-center;
+}
+
+.text {
+  @apply text-gray-500 text-5xl text-center font-semibold tracking-widest;
+}
+
+form, .resultList {
+  @apply max-w-xs mx-auto;
+}
+
+form input {
+  outline: none;
+  letter-spacing: 40px;
+  font-family: Helvetica;
+  border: 3px solid #e6b7c6;
+  @apply w-full my-6 text-9xl;
+}
+
+form input:focus {
+  border-color: #E4004D;
+  background-color: #f5e5ea;
+}
+
+form button {
+  color: #fff;
+  background-color: #E4004D;
+  @apply text-4xl block w-full py-2 font-semibold disabled:opacity-50;
+}
+
+.result {
+  @apply text-3xl text-center mt-5;
+}
+
+.result img {
+  @apply mx-auto;
+}
+
+.result .title {
+  color: #E4004D;
+  @apply font-semibold;
+}
