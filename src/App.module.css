@@ -7,8 +7,16 @@
   @apply h-12 mx-auto mt-5 max-w-xs bg-cover bg-center;
 }
 
-.text {
+.App > .text {
   @apply text-gray-500 text-5xl text-center font-semibold tracking-widest;
+}
+
+.App > small {
+  @apply mt-5 block;
+}
+
+.App > small > a {
+  color: #E4004D;
 }
 
 form, .resultList {
