@@ -50,7 +50,7 @@ const App: React.FC = () => {
   const [resultList, setResultList] = useState<string[]>();
   useEffect(() => {
     // get code json
-    fetch('/vhpi.5000/code.json').then(res => res.json()).then(setCodeList);
+    fetch('//vhpi-5000-api.sexyoung.tw').then(res => res.json()).then(setCodeList);
   }, []);
 
   const findPrize = (code: string) => {
@@ -88,7 +88,7 @@ const App: React.FC = () => {
     <div className={style.App}>
       <div className={style.logo} />
       <div className={style.text}>身份證加碼查</div>
-      <small>非官方，加碼券得獎請看<a href="https://vhpi.5000.gov.tw/" target="_blank">振興五倍券官網</a></small>
+      <small>非官方，加碼券得獎請看<a href="https://vhpi.5000.gov.tw/" target="_blank" rel="noreferrer">振興五倍券官網</a></small>
       <form onSubmit={handleSubmit}>
         <div>請輸入後三碼查詢</div>
         <input type="tel" id="code" maxLength={3} onChange={handleChange} />
