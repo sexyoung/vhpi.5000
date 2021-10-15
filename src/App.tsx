@@ -89,7 +89,7 @@ const App: React.FC = () => {
       <div className={style.logo} />
       <div className={style.text}>身份證加碼查</div>
       <form onSubmit={handleSubmit}>
-        <input type="number" id="code" maxLength={3} onChange={handleChange} />
+        <input type="tel" id="code" maxLength={3} onChange={handleChange} />
         <button disabled={disabled}>查詢</button>
       </form>
       {resultList ?
