@@ -22,6 +22,17 @@ const nameMapping = {
   rgionalRevitalization: '地生創生券',
 }
 
+const linkMapping = {
+  domesticTravel: 'https://1000.taiwan.net.tw/',
+  iYuan: 'https://explorethesun.tw/cipshop/',
+  agriculture: 'https://888.coa.gov.tw/',
+  artFunE: 'https://artsfunnext.moc.gov.tw/',
+  artFunP: 'https://artsfunnext.moc.gov.tw/',
+  sports: 'https://500.gov.tw/',
+  hakka: 'http://www.hakka500.tw/',
+  rgionalRevitalization: 'https://www.twrr.ndc.gov.tw/',
+}
+
 const images = {
   domesticTravel,
   iYuan,
@@ -102,7 +113,9 @@ const App: React.FC = () => {
               {resultList.map((result, index) =>
                 <div key={index} className="result">
                   第{result.split('-')[0]}期{nameMapping[result.split('-')[1] as keyof typeof nameMapping]}
-                  <img alt="prize" src={images[result.split('-')[1] as keyof typeof images]} />
+                  <a href={linkMapping[result.split('-')[1] as keyof typeof linkMapping]} target="_blank" rel="noreferrer">
+                    <img alt="prize" src={images[result.split('-')[1] as keyof typeof images]} />
+                  </a>
                 </div>
               )}
             </div>:
