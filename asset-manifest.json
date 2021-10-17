@@ -1,8 +1,8 @@
 {
   "files": {
-    "main.css": "/vhpi.5000/static/css/main.48164563.chunk.css",
-    "main.js": "/vhpi.5000/static/js/main.0d269bf6.chunk.js",
-    "main.js.map": "/vhpi.5000/static/js/main.0d269bf6.chunk.js.map",
+    "main.css": "/vhpi.5000/static/css/main.871c1561.chunk.css",
+    "main.js": "/vhpi.5000/static/js/main.ec29e878.chunk.js",
+    "main.js.map": "/vhpi.5000/static/js/main.ec29e878.chunk.js.map",
     "runtime-main.js": "/vhpi.5000/static/js/runtime-main.594f5baf.js",
     "runtime-main.js.map": "/vhpi.5000/static/js/runtime-main.594f5baf.js.map",
     "static/js/2.737786a1.chunk.js": "/vhpi.5000/static/js/2.737786a1.chunk.js",
@@ -10,7 +10,7 @@
     "static/js/3.562bf766.chunk.js": "/vhpi.5000/static/js/3.562bf766.chunk.js",
     "static/js/3.562bf766.chunk.js.map": "/vhpi.5000/static/js/3.562bf766.chunk.js.map",
     "index.html": "/vhpi.5000/index.html",
-    "static/css/main.48164563.chunk.css.map": "/vhpi.5000/static/css/main.48164563.chunk.css.map",
+    "static/css/main.871c1561.chunk.css.map": "/vhpi.5000/static/css/main.871c1561.chunk.css.map",
     "static/js/2.737786a1.chunk.js.LICENSE.txt": "/vhpi.5000/static/js/2.737786a1.chunk.js.LICENSE.txt",
     "static/media/agriculture.330a51ff.png": "/vhpi.5000/static/media/agriculture.330a51ff.png",
     "static/media/hakka.0f4134a4.png": "/vhpi.5000/static/media/hakka.0f4134a4.png"
@@ -18,7 +18,7 @@
   "entrypoints": [
     "static/js/runtime-main.594f5baf.js",
     "static/js/2.737786a1.chunk.js",
-    "static/css/main.48164563.chunk.css",
-    "static/js/main.0d269bf6.chunk.js"
+    "static/css/main.871c1561.chunk.css",
+    "static/js/main.ec29e878.chunk.js"
   ]
 }
