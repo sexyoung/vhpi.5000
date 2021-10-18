@@ -33,6 +33,11 @@ const linkMapping = {
   rgionalRevitalization: 'https://www.twrr.ndc.gov.tw/',
 }
 
+const dateMapping = {
+  domesticTravel: '星期五',
+  agriculture: '10/25',
+}
+
 const images = {
   domesticTravel,
   iYuan,
@@ -81,6 +86,14 @@ const App: React.FC = () => {
     (document.getElementById('code') as HTMLInputElement).value = '';
   }
 
+  const handleDate = (date: any) => {
+    if (date !== undefined || date) {
+      if (new Date().getDay() !== 5 || new Date() < new Date('2021/10/25')) {
+        return `(${date} 領券)`
+      }
+    }
+  }
+
   const handleSubmit: React.FormEventHandler<HTMLFormElement> = (e) => {
     e.preventDefault();
     findPrize((document.getElementById('code') as HTMLInputElement).value);
@@ -92,6 +105,7 @@ const App: React.FC = () => {
       findPrize(currentTarget.value);
     }
   }
+
 
   if(!codeList.length) return null;
 
@@ -112,7 +126,8 @@ const App: React.FC = () => {
               <div className={style.title}>Wooow 中獎了</div>
               {resultList.map((result, index) =>
                 <div key={index} className="result">
-                  第{result.split('-')[0]}期{nameMapping[result.split('-')[1] as keyof typeof nameMapping]}
+                  第{result.split('-')[0]}期{nameMapping[result.split('-')[1] as keyof typeof nameMapping]}<br/>
+                  {handleDate(dateMapping[result.split('-')[1] as keyof typeof dateMapping])}
                   <a href={linkMapping[result.split('-')[1] as keyof typeof linkMapping]} target="_blank" rel="noreferrer">
                     <img alt="prize" src={images[result.split('-')[1] as keyof typeof images]} />
                   </a>
