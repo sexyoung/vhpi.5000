@@ -34,7 +34,8 @@ const linkMapping = {
 }
 
 const dateMapping = {
-  domesticTravel: '星期五',
+  // domesticTravel: '星期五',
+  domesticTravel: ['10/15', '10/22', '10/29', '11/05'],
   agriculture: '10/25',
 }
 
@@ -99,11 +100,9 @@ const App: React.FC = () => {
 
   const handleDate = (date: any) => {
     if (date !== undefined || date) {
-      if (new Date().getDay() !== 5 || new Date() < new Date('2021/10/25')) {
         return `(${date} 領券)`
       }
     }
-  }
 
   const handleSubmit: React.FormEventHandler<HTMLFormElement> = (e) => {
     e.preventDefault();
@@ -139,7 +138,11 @@ const App: React.FC = () => {
                 <div key={index} className="result">
 
                   第{result.split('-')[0]}期{nameMapping[result.split('-')[1] as keyof typeof nameMapping]}<br />
-                  {handleDate(dateMapping[result.split('-')[1] as keyof typeof dateMapping])}
+                  {/* {handleDate(dateMapping[result.split('-')[1] as keyof typeof dateMapping])} */}
+                  { handleDate(result.split('-')[1] === 'domesticTravel' ?
+                      dateMapping[result.split('-')[1] as keyof typeof dateMapping][Number(result.split('-')[0])-1] :
+                      dateMapping[result.split('-')[1] as keyof typeof dateMapping])
+                  }
                   ({valueMapping[result.split('-')[1] as keyof typeof valueMapping]}元)
 
                   <a href={linkMapping[result.split('-')[1] as keyof typeof linkMapping]} target="_blank" rel="noreferrer">
