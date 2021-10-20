@@ -99,7 +99,7 @@ const App: React.FC = () => {
   }
 
   const handleDate = (date: any) => {
-    if (date !== undefined || date) {
+    if ((date !== undefined || date) && new Date() < new Date('2021/' + date)) {
         return `(${date} 領券)`
       }
     }
