@@ -38,6 +38,17 @@ const dateMapping = {
   agriculture: '10/25',
 }
 
+const valueMapping = {
+  domesticTravel: '1000',
+  iYuan: '1000',
+  agriculture: '888',
+  artFunE: '600',
+  artFunP: '600',
+  sports: '500',
+  hakka: '500',
+  rgionalRevitalization: '500',
+}
+
 const images = {
   domesticTravel,
   iYuan,
@@ -126,8 +137,11 @@ const App: React.FC = () => {
               <div className={style.title}>Wooow 中獎了</div>
               {resultList.map((result, index) =>
                 <div key={index} className="result">
-                  第{result.split('-')[0]}期{nameMapping[result.split('-')[1] as keyof typeof nameMapping]}<br/>
+
+                  第{result.split('-')[0]}期{nameMapping[result.split('-')[1] as keyof typeof nameMapping]}<br />
                   {handleDate(dateMapping[result.split('-')[1] as keyof typeof dateMapping])}
+                  ({valueMapping[result.split('-')[1] as keyof typeof valueMapping]}元)
+
                   <a href={linkMapping[result.split('-')[1] as keyof typeof linkMapping]} target="_blank" rel="noreferrer">
                     <img alt="prize" src={images[result.split('-')[1] as keyof typeof images]} />
                   </a>
