@@ -11,6 +11,15 @@ import sports from './images/sports.png';
 import hakka from './images/hakka.png';
 import rgionalRevitalization from './images/rgionalRevitalization.png';
 
+import sad0 from './images/sad1.png';
+import sad1 from './images/sad2.png';
+import sad2 from './images/sad3.png';
+import sad3 from './images/sad4.png';
+import sad4 from './images/sad5.png';
+import sad5 from './images/666.png';
+
+const sad = [ sad0, sad1, sad2, sad3, sad4, sad5 ];
+
 const nameMapping = {
   domesticTravel: '國旅券',
   iYuan: 'i原券',
@@ -72,6 +81,8 @@ type Prize = {
   rgionalRevitalization: string[];
 }
 
+let n = -1;
+
 const App: React.FC = () => {
   const [disabled, setDisabled] = useState(true);
   const [codeList, setCodeList] = useState<Prize[]>([]);
@@ -92,9 +103,12 @@ const App: React.FC = () => {
         });
       });
     });
-  
+      
+    if(!result.length) {
+      if(code === '666') n = 5;
+      else  n = ~~(Math.random() * 5
+    );}
     setResultList(result);
-  
     (document.getElementById('code') as HTMLInputElement).value = '';
   }
 
@@ -116,9 +130,7 @@ const App: React.FC = () => {
     }
   }
 
-
   if(!codeList.length) return null;
-
   return (
     <div className={style.App}>
       <div className={style.logo} />
@@ -153,7 +165,7 @@ const App: React.FC = () => {
             </div>:
             <div className={style.result}>
               沒中獎 <br />
-              <img src="https://memeprod.ap-south-1.linodeobjects.com/user-template/36bd85cd7830bb0ccdcfdcdf61210d7e.png" />
+              <img src={sad[n]} />
             </div>
           }
         </div>
