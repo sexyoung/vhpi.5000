@@ -171,6 +171,9 @@ const App: React.FC = () => {
         </div>
         :null
       }
+      <div className={style.footer}>
+        原始碼都在 <a href="https://github.com/sexyoung/vhpi.5000" target="_blank" rel="noreferrer">Github</a>
+      </div>
     </div>
   );
 }

@@ -1,10 +1,13 @@
 .App {
     text-align: center;
+    min-height: 100vh;
+    position: relative;
+    @apply py-5;
 }
 
 .logo {
     background-image: url(./images/LOGO.png);
-    @apply h-12 mx-auto mt-5 max-w-xs bg-cover bg-center;
+    @apply h-12 mx-auto max-w-xs bg-cover bg-center;
 }
 
 .App>.text {
@@ -54,4 +57,16 @@ form button {
 .result .title {
     color: #E4004D;
     @apply font-semibold;
+}
+
+.footer {
+    bottom: 0px;
+    width: 100%;
+    position: absolute;
+    text-align: center;
+    transform: translateY(-100%);
+}
+
+.footer a {
+    color: #E4004D;
 }
