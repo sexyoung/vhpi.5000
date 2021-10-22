@@ -173,6 +173,9 @@ const App: React.FC = () => {
       }
       <div className={style.footer}>
         原始碼都在 <a href="https://github.com/sexyoung/vhpi.5000" target="_blank" rel="noreferrer">Github</a>
+        <div className={style.author}>
+          本程式由 <a href="mailto:Habuche@gmail.com" target="_blank" rel="noreferrer">sexyoung</a> 開發
+        </div>
       </div>
     </div>
   );

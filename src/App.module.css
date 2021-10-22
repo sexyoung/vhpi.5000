@@ -2,7 +2,7 @@
     text-align: center;
     min-height: 100vh;
     position: relative;
-    @apply py-5;
+    @apply pt-5;
 }
 
 .logo {
@@ -64,9 +64,13 @@ form button {
     width: 100%;
     position: absolute;
     text-align: center;
-    transform: translateY(-100%);
+    transform: translateY(-10px);
 }
 
 .footer a {
     color: #E4004D;
+}
+
+.footer .author {
+    @apply text-sm;
 }
