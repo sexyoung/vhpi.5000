@@ -151,7 +151,10 @@ const App: React.FC = () => {
                 </div>
               )}
             </div>:
-            <div className={style.result}>沒中獎</div>
+            <div className={style.result}>
+              沒中獎 <br />
+              <img src="https://memeprod.ap-south-1.linodeobjects.com/user-template/36bd85cd7830bb0ccdcfdcdf61210d7e.png" />
+            </div>
           }
         </div>
         :null
